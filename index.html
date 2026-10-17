@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Proyect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+    <button id="Cambiar" class="btn seis" onclick="Estilo()">
+            oscuro
+        </button>
+
+    <!-- INICIO -->
+    <div id="inicio" class="inicio">
+        <h1 class="text">Bienvenido</h1>
+
+        
+
+        <button class="btn uno" onclick="AbrirRegister()">
+            Registrar
+        </button>
+
+        <button class="btn dos" onclick="AbrirLogin()">
+            Login
+        </button>
+    </div>
+
+
+    <!-- LOGIN -->
+    <div id="login" class="login">
+        <h1 class="text">Iniciar sesión</h1>
+
+        <input
+            id="InputNombre"
+            class="input name"
+            type="email"
+            placeholder="Correo electrónico"
+            autocomplete="email"
+        >
+
+        <input
+            id="InputContraseña"
+            class="input password"
+            type="password"
+            placeholder="Contraseña"
+            autocomplete="current-password"
+        >
+
+        <button class="btn siete" onclick="login()">
+            Entrar
+        </button>
+
+        <button class="btn uno" onclick="AbrirRegister()">
+            Crear cuenta
+        </button>
+    </div>
+
+
+    <!-- REGISTRO -->
+    <div id="register" class="register">
+        <h1 class="text">Crear cuenta</h1>
+
+        <input
+            id="InputFecha"
+            class="input fecha"
+            type="date"
+        >
+
+        <input
+            id="InputCode"
+            class="input code"
+            type="text"
+            placeholder="Código de registro"
+        >
+
+        <input
+            id="InputName"
+            class="input name"
+            type="text"
+            placeholder="Nickname"
+            maxlength="30"
+            autocomplete="nickname"
+        >
+
+        <input
+            id="InputEmail"
+            class="input email"
+            type="email"
+            placeholder="Correo electrónico"
+            autocomplete="email"
+        >
+
+        <input
+            id="InputPassword"
+            class="input password"
+            type="password"
+            placeholder="Contraseña (mínimo 6 caracteres)"
+            autocomplete="new-password"
+        >
+
+        <button class="btn tres" onclick="registrar()">
+            Registrar
+        </button>
+
+        <button class="btn uno" onclick="AbrirLogin()">
+            Ya tengo una cuenta
+        </button>
+    </div>
+
+
+    <!-- HOME -->
+    <div id="home">
+        <h2 id="user">Usuario</h2>
+        <h1 class="text">Bienvenido</h1>
+
+        <button class="btn uno" onclick="BtnChat()">
+            Chats
+        </button>
+
+        <button class="btn uno" onclick="BtnNotice()">
+            Avisos
+        </button>
+
+        <button class="btn nueve" onclick="cerrarSesion()">
+            Cerrar sesión
+        </button>
+    </div>
+
+
+    <!-- CHATS -->
+    <div id="ChatDiv">
+
+        <!-- CONTACTOS -->
+        <div id="contactos">
+            <h2 class="text">Contactos</h2>
+
+            <div id="listaContactos"></div>
+
+            <button class="btn nueve" onclick="volverHome()">
+                Volver al inicio
+            </button>
+        </div>
+
+        <!-- CONVERSACIÓN -->
+        <div id="Chat">
+            <button class="btn nueve" onclick="ChatSalir()">
+                ← Contactos
+            </button>
+
+            <h2 id="nombreContacto">Conversación</h2>
+
+            <div id="mensajes"></div>
+
+            <input
+                id="mensajeTexto"
+                type="text"
+                placeholder="Escribe un mensaje..."
+                maxlength="5000"
+                autocomplete="off"
+            >
+
+            <button class="btn enviar" onclick="enviarMensaje()">
+                Enviar
+            </button>
+        </div>
+
+    </div>
+
+
+    <!-- AVISOS -->
+    <div id="notice">
+        <h2 class="text">Avisos</h2>
+
+        <p>Bienvenido a la aplicación.</p>
+
+        <button class="btn nueve" onclick="BtnNotice()">
+            Volver
+        </button>
+    </div>
+<br><br><br><br><br>
+<div class="t">
+  <p>desarrollada por mister.   v0.1 beta</p>
+</div>
+
+    <!-- SUPABASE Y app.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>
